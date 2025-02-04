@@ -10,6 +10,7 @@ export async function POST() {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         path: '/',
+        sameSite: "strict"
     });
 
     const response = NextResponse.json({ token }, { status: 200 });
